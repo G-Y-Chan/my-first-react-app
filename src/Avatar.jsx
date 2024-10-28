@@ -1,9 +1,11 @@
 function Avatar() {
+    const avatar = 'https://i.imgur.com/NAGTvvz.png';
+    const description = 'Example user';
     return (
         <img 
             className="avatar"
-            src="https://i.imgur.com/NAGTvvz.png"
-            alt="Example user"
+            src={avatar}
+            alt={description}
         />
     );
 }
