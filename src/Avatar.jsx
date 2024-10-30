@@ -11,6 +11,10 @@ function Avatar() {
                 src={avatar}
                 alt={description}
             />
+            <h2>Pets:</h2>
+            <ul>
+                {petsList}
+            </ul>
         </div>
     );
 }
