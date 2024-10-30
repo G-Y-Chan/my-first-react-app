@@ -2,6 +2,16 @@ function ListItem(props) {
     return <li>{props.animal}</li>
 }
 
+function List(props) {
+    return (
+        <ul>
+            {props.pets.map((pet) => {
+                return <ListItem key={pet} pet={pet} />;
+            })}
+        </ul>
+    );
+}
+
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
     const description = 'Example user';
