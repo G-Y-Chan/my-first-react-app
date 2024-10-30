@@ -3,6 +3,14 @@ function ListItem(props) {
 }
 
 function List(props) {
+    if (!props.pets) {
+        return <div>Loading...</div>;
+    }
+
+    if (props.pets.length === 0) {
+        return <div>There are no pets in the list!</div>;
+    }
+
     return (
         <ul>
             {props.pets.map((pet) => {
