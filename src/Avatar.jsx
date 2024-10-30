@@ -36,6 +36,8 @@ function Avatar() {
             />
             <h2>Pets:</h2>
             <List pets={pets} />
+            <h2>Pets with short names:</h2>
+            <ListOfShortNames pets={pets} />
         </div>
     );
 }
