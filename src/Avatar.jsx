@@ -1,3 +1,7 @@
+function ListItem(props) {
+    return <li>{props.animal}</li>
+}
+
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
     const description = 'Example user';
