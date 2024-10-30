@@ -1,5 +1,5 @@
 function ListItem(props) {
-    return <li>{props.pet}</li>
+    return <li>{props.pet.name}</li>
 }
 
 function List(props) {
@@ -14,7 +14,7 @@ function List(props) {
     return (
         <ul>
             {props.pets.map((pet) => {
-                return <ListItem key={pet} pet={pet} />;
+                return <ListItem key={pet.id} pet={pet} />;
             })}
         </ul>
     );
@@ -24,7 +24,7 @@ function ListOfShortNames(props) {
     return (
         <ul>
             {props.pets.map((pet) => {
-                return (pet.length <= 4) ? <ListItem key={pet} pet={pet} /> : null;
+                return (pet.name.length <= 4) ? <ListItem key={pet.id} pet={pet} /> : null;
             })}
         </ul>
     )
@@ -33,7 +33,12 @@ function ListOfShortNames(props) {
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
     const description = 'Example user';
-    const pets = ["Lion", "Cow", "Snake", "Lizard"];
+    const pets = [
+        { id: 0, name: "Ace"},
+        { id: 1, name: "Bambi"},
+        { id: 2, name: "Gus"},
+        { id: 3, name: "Waffles"}
+    ];
     return (
         <div>
             <h1>User Information</h1>
