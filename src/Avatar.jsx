@@ -12,6 +12,16 @@ function List(props) {
     );
 }
 
+function ListOfShortNames(props) {
+    return (
+        <ul>
+            {props.pets.map((pet) => {
+                return (pet.length <= 4) ? <ListItem key={pet} pet={pet} /> : null;
+            })}
+        </ul>
+    )
+}
+
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
     const description = 'Example user';
