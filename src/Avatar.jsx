@@ -12,7 +12,7 @@ function List(props) {
     }
 
     return (
-        <ul>
+        <ul style={{listStyleType: "none"}}>
             {props.pets.map((pet) => {
                 return <ListItem key={pet.id} pet={pet} />;
             })}
@@ -22,7 +22,7 @@ function List(props) {
 
 function ListOfShortNames(props) {
     return (
-        <ul>
+        <ul style={{listStyleType: "none"}}>
             {props.pets.map((pet) => {
                 return (pet.name.length <= 4) ? <ListItem key={pet.id} pet={pet} /> : null;
             })}
