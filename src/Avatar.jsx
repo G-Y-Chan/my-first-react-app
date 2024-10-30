@@ -33,12 +33,16 @@ function ListOfShortNames(props) {
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
     const description = 'Example user';
-    const pets = [
-        { id: 0, name: "Ace"},
-        { id: 1, name: "Bambi"},
-        { id: 2, name: "Gus"},
-        { id: 3, name: "Waffles"}
-    ];
+    const pets = [{ 
+        id: 0, 
+        name: "Ace"
+    }, { id: 1,
+         name: "Bambi"
+    }, { id: 2,
+         name: "Gus"
+    }, { id: 3,
+         name: "Waffles"
+    }];
     return (
         <div>
             <h1>User Information</h1>
