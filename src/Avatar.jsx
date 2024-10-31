@@ -2,6 +2,11 @@ import List from "./List.jsx";
 import ListOfShortNames from "./ListOfShortNames.jsx";
 import Button from "./Button.jsx";
 import DefaultButton from "./DefaultButton.jsx";
+import FunctionalButton from "./FunctionalButton.jsx";
+
+const goToGoogle = () => {
+    window.location.href = "https://www.google.com";
+};
 
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
@@ -31,6 +36,8 @@ function Avatar() {
             <h2>Random buttons:</h2>
             <Button text="Click me!" color="blue" fontSize={20}/>
             <DefaultButton text="Overide text"/>
+            <h2>Do a google search:</h2>
+            <FunctionalButton text="Google" handleClick={goToGoogle}/>
         </div>
     );
 }
