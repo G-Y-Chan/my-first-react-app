@@ -1,5 +1,6 @@
 import List from "./List.jsx";
 import ListOfShortNames from "./ListOfShortNames.jsx";
+import Button from "./Button.jsx";
 
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
@@ -26,6 +27,8 @@ function Avatar() {
             <List pets={pets} />
             <h2>Pets with short names:</h2>
             <ListOfShortNames pets={pets} />
+            <h2>Random buttons:</h2>
+            <Button text="Click me!" color="blue" fontSize={20}/>
         </div>
     );
 }
