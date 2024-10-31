@@ -1,34 +1,5 @@
-function ListItem(props) {
-    return <li>{props.pet.name}</li>
-}
-
-function List(props) {
-    if (!props.pets) {
-        return <div>Loading...</div>;
-    }
-
-    if (props.pets.length === 0) {
-        return <div>There are no pets in the list!</div>;
-    }
-
-    return (
-        <ul style={{listStyleType: "none"}}>
-            {props.pets.map((pet) => {
-                return <ListItem key={pet.id} pet={pet} />;
-            })}
-        </ul>
-    );
-}
-
-function ListOfShortNames(props) {
-    return (
-        <ul style={{listStyleType: "none"}}>
-            {props.pets.map((pet) => {
-                return (pet.name.length <= 4) ? <ListItem key={pet.id} pet={pet} /> : null;
-            })}
-        </ul>
-    )
-}
+import List from "./List.jsx";
+import ListOfShortNames from "./ListOfShortNames.jsx";
 
 function Avatar() {
     const avatar = 'https://i.imgur.com/NAGTvvz.png';
