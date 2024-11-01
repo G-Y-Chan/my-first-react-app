@@ -11,6 +11,7 @@ function SculptureDisplay() {
         } else {
             setSculptureIndex(sculptureIndex - 1);
         }
+        toggleShowDetails(true);
     }
 
     const incrementSculptureIndex = () => {
@@ -19,6 +20,7 @@ function SculptureDisplay() {
         } else {
             setSculptureIndex(0);
         }
+        toggleShowDetails(true);
     }
 
     const toggleDetails = () => {
