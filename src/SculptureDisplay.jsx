@@ -3,7 +3,7 @@ import { sculptureList } from "./data/SculptureList";
 
 function SculptureDisplay() {
     const [sculptureIndex, setSculptureIndex] = useState(0);
-    const [showDetails, toggleShowDetails] = useState(true);
+    const [showDetails, setShowDetails] = useState(true);
 
     const decrementSculptureIndex = () => {
         if (sculptureIndex == 0) {
@@ -11,7 +11,7 @@ function SculptureDisplay() {
         } else {
             setSculptureIndex(sculptureIndex - 1);
         }
-        toggleShowDetails(true);
+        setShowDetails(true);
     }
 
     const incrementSculptureIndex = () => {
@@ -20,11 +20,11 @@ function SculptureDisplay() {
         } else {
             setSculptureIndex(0);
         }
-        toggleShowDetails(true);
+        setShowDetails(true);
     }
 
     const toggleDetails = () => {
-        toggleShowDetails(!showDetails);
+        setShowDetails(!showDetails);
     }
 
     return (
