@@ -14,7 +14,23 @@ function FullNameForm() {
 
     return (
         <div>
-
+            <label>
+                First name:
+            </label>
+            <input
+                onChange={e => handleFirstNameChange(e)}
+            >
+            </input>
+            <label>
+                Last name:
+            </label>
+            <input
+                onChange={e => handleLastNameChange(e)}
+            >
+            </input>
+            <p>Full name: {firstName} {lastName}</p>
         </div>
     );
 }
+
+export default FullNameForm;
