@@ -3,6 +3,7 @@ import { sculptureList } from "./data/SculptureList";
 
 function SculptureDisplay() {
     const [sculptureIndex, setSculptureIndex] = useState(0);
+    const [showDetails, toggleShowDetails] = useState(true);
 
     const decrementSculptureIndex = () => {
         if (sculptureIndex == 0) {
@@ -20,6 +21,10 @@ function SculptureDisplay() {
         }
     }
 
+    const toggleDetails = () => {
+        toggleShowDetails(!showDetails);
+    }
+
     return (
         <div>
             <h1>{sculptureList[sculptureIndex].name}</h1>
@@ -31,12 +36,17 @@ function SculptureDisplay() {
                 alt={sculptureList[sculptureIndex].alt}
             ></img>
             <p>
-                {sculptureList[sculptureIndex].description}
+                {showDetails && sculptureList[sculptureIndex].description}
             </p>
             <button
                 onClick={decrementSculptureIndex}
             >
                 Previous
+            </button>
+            <button
+                onClick={toggleDetails}
+            >
+                {showDetails ? "Hide details" : "Show details"}
             </button>
             <button
                 onClick={incrementSculptureIndex}
