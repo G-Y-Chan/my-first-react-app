@@ -4,6 +4,7 @@ import Button from "./Button.jsx";
 import DefaultButton from "./DefaultButton.jsx";
 import FunctionalButton from "./FunctionalButton.jsx";
 import ColorBox from "./ColorBox.jsx";
+import SculptureDisplay from "./SculptureDisplay.jsx";
 
 const goToGoogle = () => {
     window.location.href = "https://www.google.com";
@@ -40,6 +41,7 @@ function Avatar() {
             <h2>Do a google search:</h2>
             <FunctionalButton text="Google" handleClick={goToGoogle}/>
             <ColorBox></ColorBox>
+            <SculptureDisplay></SculptureDisplay>
         </div>
     );
 }
