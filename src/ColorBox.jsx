@@ -15,8 +15,8 @@ function ColorBox() {
         <div
             style={{
                 border: "solid",
-                height: "100px",
-                width: "50%",
+                height: "auto",
+                width: "auto",
                 backgroundColor: backgroundColor,
             }}>
             <h2>
