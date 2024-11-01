@@ -3,6 +3,7 @@ import ListOfShortNames from "./ListOfShortNames.jsx";
 import Button from "./Button.jsx";
 import DefaultButton from "./DefaultButton.jsx";
 import FunctionalButton from "./FunctionalButton.jsx";
+import ColorBox from "./ColorBox.jsx";
 
 const goToGoogle = () => {
     window.location.href = "https://www.google.com";
@@ -38,6 +39,7 @@ function Avatar() {
             <DefaultButton text="Overide text"/>
             <h2>Do a google search:</h2>
             <FunctionalButton text="Google" handleClick={goToGoogle}/>
+            <ColorBox></ColorBox>
         </div>
     );
 }
