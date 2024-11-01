@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sculptureList } from "./data/SculptureList";
+import { sculptureList } from "../data/SculptureList";
 
 function SculptureDisplay() {
     const [sculptureIndex, setSculptureIndex] = useState(0);
