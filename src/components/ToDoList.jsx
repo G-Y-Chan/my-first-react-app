@@ -1,7 +1,7 @@
 import ToDoItem from "./ToDoItem";
 import { useState } from "react";
 
-function handleSubmitEvent(taskList, setTaskList, taskNumber, setTaskNumber, taskTitle) {
+function handleSubmitEvent(taskList, setTaskList, taskNumber, setTaskNumber, taskTitle, setTaskTitle) {
     if (taskTitle.length > 0) {
         let newTask = {
             id: taskNumber,
@@ -9,6 +9,7 @@ function handleSubmitEvent(taskList, setTaskList, taskNumber, setTaskNumber, tas
         };
         setTaskList([...taskList, newTask]);
         setTaskNumber(taskNumber + 1);
+        setTaskTitle("");
     }
 }
 
@@ -24,10 +25,11 @@ function ToDoList(props) {
                 onChange={(e) => {
                     setTaskTitle(e.target.value);
                 }}
+                value={taskTitle}
             ></input>
             <button
                 onClick={() => {
-                    handleSubmitEvent(taskList, setTaskList, taskNumber, setTaskNumber, taskTitle);
+                    handleSubmitEvent(taskList, setTaskList, taskNumber, setTaskNumber, taskTitle, setTaskTitle);
                 }}
             >
                 Submit
