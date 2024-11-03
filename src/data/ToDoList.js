@@ -2,9 +2,9 @@ export const toDoList = [{
     id: 0,
     title: 'Buying groceries'
 }, {
-    id: 0,
+    id: 1,
     title: 'Read book'
 }, {
-    id: 0,
+    id: 2,
     title: 'Assignment 4'
 }];
