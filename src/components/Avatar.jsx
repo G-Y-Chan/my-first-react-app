@@ -6,6 +6,8 @@ import FunctionalButton from "./FunctionalButton.jsx";
 import ColorBox from "./ColorBox.jsx";
 import SculptureDisplay from "./SculptureDisplay.jsx";
 import FullNameForm from "./FullNameForm.jsx";
+import ToDoList from "./ToDoList.jsx";
+import { toDoList } from "../data/ToDoList.js";
 
 const goToGoogle = () => {
     window.location.href = "https://www.google.com";
@@ -44,6 +46,7 @@ function Avatar() {
             <ColorBox></ColorBox>
             <SculptureDisplay></SculptureDisplay>
             <FullNameForm></FullNameForm>
+            <ToDoList toDoList={toDoList}></ToDoList>
         </div>
     );
 }
